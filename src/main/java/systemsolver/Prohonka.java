@@ -1,5 +1,7 @@
 package systemsolver;
 
+import rits.RitsMethod;
+
 public class Prohonka {
     private int n;
     private double[] a;
@@ -10,6 +12,7 @@ public class Prohonka {
     private double[] ksi;
     private double[] eta;
     private double[] y;
+    private double e = 0.001;
 
     public Prohonka(double[][] a, double[] b) {
         n = b.length;
@@ -67,4 +70,13 @@ public class Prohonka {
         }
         System.out.println();
     }
+
+//    private double[] ex() {
+//        double[] t = RitsMethod.x;
+//        double[] m = new double[t.length];
+//        for (int i = 1; i < t.length; i++) {
+//            m[i] = main.Main.exactF(t[i]) + Math.pow(0.1, i + 1);
+//        }
+//        return m;
+//    }
 }
